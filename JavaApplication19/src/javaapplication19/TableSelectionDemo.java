@@ -30,7 +30,7 @@
  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
  
-package components;
+package javaapplication19;
  
 /*
  * TableSelectionDemo.java requires no other files.
