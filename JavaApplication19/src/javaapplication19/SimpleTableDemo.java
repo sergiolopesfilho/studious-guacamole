@@ -43,6 +43,7 @@ import java.awt.Dimension;
 import java.awt.GridLayout;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import javax.swing.table.TableColumn;
 
 public class SimpleTableDemo extends JPanel {
     private boolean DEBUG = false;
@@ -86,6 +87,16 @@ public class SimpleTableDemo extends JPanel {
 
         //Add the scroll pane to this panel.
         add(scrollPane);
+        
+        TableColumn column = null;
+for (int i = 0; i < 5; i++) {
+    column = table.getColumnModel().getColumn(i);
+    if (i == 2) {
+        column.setPreferredWidth(100); //third column is bigger
+    } else {
+        column.setPreferredWidth(50);
+    }
+}
     }
 
     private void printDebugData(JTable table) {
